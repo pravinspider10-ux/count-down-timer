@@ -40,7 +40,7 @@
         const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
 
         // Display the countdown
-        document.getElementById("countdown").innerText = `Days: ${days},<br> Hours: ${hours}, Minutes: ${minutes}, Seconds: ${seconds}`;
+        document.getElementById("countdown").innerText = `Days: ${days}, Hours: ${hours}, Minutes: ${minutes}, Seconds: ${seconds}`;
 
         // If the countdown is finished, clear the interval
         if (remainingTime <= 0) {
