@@ -3,11 +3,18 @@
 <head>
   <title>Countdown Timer</title>
   <style>
+    body {
+      background-image: url('wine-timer.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
     .timer {
       font-size: 48px;
       font-weight: bold;
       text-align: center;
       margin-top: 100px;
+      color: white;
     }
   </style>
 </head>
@@ -38,7 +45,7 @@
       // If the countdown is finished, clear the interval
       if (remainingTime <= 0) {
         clearInterval(countdown);
-        document.getElementById("countdown").innerText = "Countdown finished!";
+        document.getElementById("countdown").innerText = "This is the day!";
       }
     }, 1000);
   </script>
