@@ -1,53 +1,53 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Countdown Timer</title>
-  <style>
-    body {
-      background-image: url('wine-timer.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <title>Countdown Timer</title>
+    <style>
+        body {
+        background-image: url('wine-timer.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        }
 
-    .timer {
-      font-size: 48px;
-      font-weight: bold;
-      text-align: center;
-      margin-top: 100px;
-      color: white;
-    }
-  </style>
-</head>
-<body>
-  <div class="timer" id="countdown"></div>
+        .timer {
+        font-size: 50x;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 250px;
+        color: white;
+        }
+    </style>
+    </head>
+    <body>
+    <div class="timer" id="countdown"></div>
 
-  <script>
-    // Set the target date and time
-    const targetDate = new Date("March 31, 2026 18:00:00").getTime();
+    <script>
+        // Set the target date and time
+        const targetDate = new Date("March 31, 2026 18:00:00").getTime();
 
-    // Update the countdown every second
-    const countdown = setInterval(() => {
-      // Get the current date and time
-      const now = new Date().getTime();
+        // Update the countdown every second
+        const countdown = setInterval(() => {
+        // Get the current date and time
+        const now = new Date().getTime();
 
-      // Calculate the remaining time
-      const remainingTime = targetDate - now;
+        // Calculate the remaining time
+        const remainingTime = targetDate - now;
 
-      // Calculate the days, hours, minutes, and seconds
-      const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+        // Calculate the days, hours, minutes, and seconds
+        const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
 
-      // Display the countdown
-      document.getElementById("countdown").innerText = `Days: ${days}, Hours: ${hours}, Minutes: ${minutes}, Seconds: ${seconds}`;
+        // Display the countdown
+        document.getElementById("countdown").innerText = `Days: ${days}, Hours: ${hours}, Minutes: ${minutes}, Seconds: ${seconds}`;
 
-      // If the countdown is finished, clear the interval
-      if (remainingTime <= 0) {
-        clearInterval(countdown);
-        document.getElementById("countdown").innerText = "This is the day!";
-      }
-    }, 1000);
-  </script>
-</body>
-</html>
+        // If the countdown is finished, clear the interval
+        if (remainingTime <= 0) {
+            clearInterval(countdown);
+            document.getElementById("countdown").innerText = "This is the day!";
+        }
+        }, 1000);
+    </script>
+    </body>
+    </html>
